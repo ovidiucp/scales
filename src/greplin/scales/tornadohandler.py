@@ -33,7 +33,7 @@ class StatsHandler(tornado.web.RequestHandler):
     self.serverName = serverName
 
 
-  def get(self, path): # pylint: disable=W0221
+  def get(self, path=None): # pylint: disable=W0221
     """Renders a GET request, by showing this nodes stats and children."""
     path = path or ''
     path = path.lstrip('/')
